@@ -1,0 +1,29 @@
+{
+  "name": "a11y-tool",
+  "version": "1.0.0",
+  "main": "src/index.js",
+  "author": "Ricardo Sousa <rwmsousa@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "react": "^19.0.0",
+    "typescript": "^5.7.3"
+  },
+  "files": [
+    "index.js",
+    "index.d.ts"
+  ],
+  "scripts": {
+    "build": "tsc",
+    "prepublishOnly": "npm run build"
+  },
+  "keywords": [
+    "accessibility",
+    "react",
+    "react-component",
+    "a11y"
+  ],
+  "description": "A React component for enhancing web accessibility with a floating icon and toolbar.",
+  "devDependencies": {
+    "@types/react": "^19.0.7"
+  }
+}
