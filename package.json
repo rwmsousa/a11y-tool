@@ -14,7 +14,10 @@
   ],
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "npm run build"
+    "prepublishOnly": "npm run build",
+    "lint": "eslint . --cache --fix",
+    "format": "prettier --write --cache .",
+    "stylelint": "stylelint \"**/*.css\" \"**/*.scss\" --cache --fix"
   },
   "keywords": [
     "accessibility",
@@ -24,6 +27,14 @@
   ],
   "description": "A React component for enhancing web accessibility with a floating icon and toolbar.",
   "devDependencies": {
-    "@types/react": "^19.0.7"
+    "@eslint/eslintrc": "^3.2.0",
+    "@types/node": "^22.10.7",
+    "@types/react": "^19.0.7",
+    "@typescript-eslint/eslint-plugin": "^8.21.0",
+    "eslint": "^9.18.0",
+    "eslint-config-prettier": "^10.0.1",
+    "eslint-plugin-prettier": "^5.2.3",
+    "eslint-plugin-react": "^7.37.4",
+    "prettier": "^3.4.2"
   }
 }
