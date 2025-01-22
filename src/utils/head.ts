@@ -21,13 +21,15 @@ export default function Head() {
     const lexendPeta = document.createElement('link');
 
     lexendPeta.rel = 'stylesheet';
-    lexendPeta.href = 'https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap';
+    lexendPeta.href =
+      'https://fonts.googleapis.com/css2?family=Lexend+Peta&display=swap';
     document.head.appendChild(lexendPeta);
 
     const lexendDeca = document.createElement('link');
 
     lexendDeca.rel = 'stylesheet';
-    lexendDeca.href = 'https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap';
+    lexendDeca.href =
+      'https://fonts.googleapis.com/css2?family=Lexend+Deca&display=swap';
     document.head.appendChild(lexendDeca);
 
     const dyslexic = document.createElement('link');
@@ -39,7 +41,8 @@ export default function Head() {
     const googleIcons = document.createElement('link');
 
     googleIcons.rel = 'stylesheet';
-    googleIcons.href = 'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0';
+    googleIcons.href =
+      'https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0';
     document.head.appendChild(googleIcons);
   }
 }

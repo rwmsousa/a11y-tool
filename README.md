@@ -1,4 +1,3 @@
-
 # Digital Accessibility Tool
 
 A React component for enhancing web accessibility with a floating icon and toolbar.

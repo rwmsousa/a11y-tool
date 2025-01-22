@@ -55,7 +55,9 @@ export default function VLibrasWid() {
 
     document
       .getElementsByClassName('vpw-settings-btn-close')[0]
-      ?.addEventListener('click', () => localStorage.setItem('storageLibras', JSON.stringify(1)));
+      ?.addEventListener('click', () =>
+        localStorage.setItem('storageLibras', JSON.stringify(1)),
+      );
 
     const searchButtonLibras = Array.from(document.getElementsByTagName('IMG'));
 

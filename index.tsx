@@ -6,7 +6,7 @@ import VLibrasWid from './src/components/VLibras';
 import { IStorageSettings } from './src/interfaces/IStorageSettings';
 
 export default function AccToolbar() {
-  const [ showToolbar, setShowToolbar ] = useState(false);
+  const [showToolbar, setShowToolbar] = useState(false);
 
   useEffect(() => {
     Head();
@@ -25,7 +25,7 @@ export default function AccToolbar() {
 
     Object.keys(defaultSettings).forEach((key) => {
       if (!localStorage.getItem(key)) {
-        localStorage.setItem(key, JSON.stringify(defaultSettings[ key ]));
+        localStorage.setItem(key, JSON.stringify(defaultSettings[key]));
       }
     });
   };
