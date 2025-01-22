@@ -1,0 +1,167 @@
+{
+  "extends": ["airbnb", "next/core-web-vitals", "plugin:jsx-a11y/recommended"],
+  "plugins": ["react", "simple-import-sort"],
+  "rules": {
+    "unicode-bom": ["error", "never"],
+    "no-console": "off",
+    "no-new": "off",
+    "no-undef": "off",
+    "array-callback-return": "off",
+    "react/no-danger": "off",
+    "react/no-unstable-nested-components": "off",
+    "jsx-quotes": ["error", "prefer-single"],
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/jsx-closing-bracket-location": "off",
+    "jsx-a11y/label-has-associated-control": [
+      "error",
+      {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }
+    ],
+    "jsx-a11y/label-has-for": [
+      "error",
+      {
+        "required": {
+          "some": ["nesting", "id"]
+        }
+      }
+    ],
+    "function-paren-newline": "off",
+    "implicit-arrow-linebreak": ["error", "beside"],
+    "linebreak-style": "off",
+    "max-len": [
+      "error",
+      {
+        "code": 150,
+        "tabWidth": 2,
+        "ignoreStrings": true,
+        "ignoreComments": true,
+        "ignoreTemplateLiterals": true
+      }
+    ],
+    // Define a ordenação das importações
+    "simple-import-sort/imports": [
+      "error",
+      {
+        "groups": [
+          // Pacotes `next` primeiro.
+          ["^next", "^@?\\w"],
+          // Pacotes `react`.
+          ["^react", "^@?\\w"],
+          // Importações de módulos (side effects).
+          ["^\\u0000"],
+          // Componentes locais.
+          ["^(@|components)(/.*|$)"],
+          // Importações de parents. (..)
+          ["^\\.\\.(?!/?$)", "^\\.\\./?$"],
+          // Importações da mesma pasta. (.)
+          ["^\\./(?=.*/)(?!/?$)", "^\\.(?!/?$)", "^\\./?$"],
+          // Importacões de estilo.
+          ["^.+\\.?(scss)$", "^.+\\.?(css)$"]
+        ]
+      }
+    ],
+    // Define erro para que as exportações sejam ordenadas automaticamente
+    "simple-import-sort/exports": "error",
+    // Define erro para arquivos que não estejam entre as extensões definidas
+    "react/jsx-filename-extension": [
+      1,
+      {
+        "extensions": [".js", ".jsx", ".ts", ".tsx"]
+      }
+    ],
+    // Permite a importação de arquivos index com as extensões definidas.
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      {
+        "js": "never",
+        "jsx": "never",
+        "ts": "never",
+        "tsx": "never"
+      }
+    ],
+    "no-param-reassign": "off",
+    // máximo de linhas por função
+    "max-lines-per-function": ["error", 180],
+    // máximo de linhas por arquivo
+    "max-lines": ["error", 500],
+    // camelCase para variáveis e funções
+    "camelcase": [
+      "error",
+      {
+        "properties": "always",
+        "ignoreDestructuring": true,
+        "ignoreImports": false,
+        "ignoreGlobals": false
+      }
+    ],
+    // sem espaço antes de abrir parenteses
+    "space-before-function-paren": ["error", "never"],
+    // espaço antes das funcões
+    "space-before-blocks": ["error", "always"],
+    // permite a declaracao de props sem default
+    "react/require-default-props": "off",
+    // desabilita erro ao utilizar spreading de props.
+    "react/jsx-props-no-spreading": "off",
+    // exige linhas em branco nos começos e finais de blocos,
+    // comentários, objetos e arrays;
+    "lines-around-comment": [
+      "error",
+      {
+        "beforeBlockComment": true,
+        "afterBlockComment": true,
+        "beforeLineComment": true,
+        "afterLineComment": true,
+        "allowBlockStart": true,
+        "allowBlockEnd": true,
+        "allowObjectStart": true,
+        "allowObjectEnd": true,
+        "allowArrayStart": true,
+        "allowArrayEnd": true
+      }
+    ],
+    // espaçamento entre linhas internas nas funções
+    "padded-blocks": [
+      "error",
+      {
+        "blocks": "never",
+        "classes": "always",
+        "switches": "never"
+      }
+    ],
+    //preenchimento de linha entre declarações
+    "padding-line-between-statements": [
+      "error",
+      {
+        "blankLine": "always",
+        "prev": "*",
+        "next": "return"
+      },
+      {
+        "blankLine": "always",
+        "prev": ["const", "let", "var"],
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": ["const", "let", "var"],
+        "next": ["const", "let", "var"]
+      },
+      {
+        "blankLine": "always",
+        "prev": "directive",
+        "next": "*"
+      },
+      {
+        "blankLine": "any",
+        "prev": "directive",
+        "next": "directive"
+      }
+    ],
+    // verifica se os operadores estão misturados
+    "no-mixed-operators": "off"
+  }
+}
